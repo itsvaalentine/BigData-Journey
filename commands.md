@@ -1,6 +1,6 @@
-# 🐳 Docker + Jupyter + AWS 
+#  Docker + Jupyter + AWS 
 
-## 🐳 DOCKER – Instalación y verificación
+##  DOCKER – Instalación y verificación
 
 ```powershell
 # Verificar versión instalada
@@ -16,7 +16,7 @@ docker run hello-world
 
 ---
 
-## 📦 DOCKER – Gestión de imágenes
+##  DOCKER – Gestión de imágenes
 
 ```powershell
 # Descargar imagen de Jupyter Notebook
@@ -31,7 +31,7 @@ docker images
 
 ---
 
-## 🚀 EJECUTAR JUPYTER NOTEBOOK CON DOCKER
+##  EJECUTAR JUPYTER NOTEBOOK CON DOCKER
 
 ```powershell
 # Modo básico
@@ -47,13 +47,12 @@ docker run -p 8888:8888 -v ${PWD}:/home/jovyan/work jupyter/base-notebook
 docker run -p 8888:8888 -v %cd%:/home/jovyan/work jupyter/base-notebook
 ```
 
-> 💡 `-p 8888:8888` → mapea el puerto local al del contenedor  
-> 💡 `-v ${PWD}:/home/jovyan/work` → monta la carpeta actual dentro del contenedor  
-> 💡 En Windows, `$(pwd)` de Linux se reemplaza por `${PWD}` (PowerShell) o `%cd%` (CMD)
+>  `-p 8888:8888` → mapea el puerto local al del contenedor  
+>  `-v ${PWD}:/home/jovyan/work` → monta la carpeta actual dentro del contenedor  
 
 ---
 
-## 🛑 DOCKER – Gestión de contenedores
+##  DOCKER – Gestión de contenedores
 
 ```powershell
 # Listar contenedores en ejecución
@@ -74,7 +73,7 @@ docker rmi <image_id>
 
 ---
 
-## 🖥️ ACCEDER A UN CONTENEDOR EN EJECUCIÓN
+##  ACCEDER A UN CONTENEDOR EN EJECUCIÓN
 
 ```powershell
 # Abrir shell interactivo dentro del contenedor
@@ -83,7 +82,7 @@ docker exec -it <container_id> bash
 
 ---
 
-## ☁️ AWS CLI CON DOCKER EN WINDOWS
+##  AWS CLI CON DOCKER EN WINDOWS
 
 ```powershell
 # Verificar versión de AWS CLI
@@ -99,7 +98,7 @@ docker run --rm -it -v %USERPROFILE%\.aws:/root/.aws amazon/aws-cli configure
 
 ---
 
-## 📂 COMANDOS AWS S3 EN WINDOWS
+##  COMANDOS AWS S3 EN WINDOWS
 
 ```powershell
 # Listar buckets S3
@@ -131,7 +130,7 @@ docker run --rm -it ^
 ```
 
 
-## 🔥 EJECUTAR CONTENEDOR CON NOMBRE PERSONALIZADO
+##  EJECUTAR CONTENEDOR CON NOMBRE PERSONALIZADO
 
 ```powershell
 docker run -d -p 8888:8888 --name jupyter-lab jupyter/base-notebook
@@ -139,7 +138,7 @@ docker run -d -p 8888:8888 --name jupyter-lab jupyter/base-notebook
 
 ---
 
-## 🧹 LIMPIEZA
+##  LIMPIEZA
 
 ```powershell
 # Eliminar contenedores detenidos
@@ -151,7 +150,7 @@ docker image prune
 
 ---
 
-## 📌 Propósito
+##  Propósito
 
 Estos comandos permiten:
 - Entornos de desarrollo contenedorizados en Windows
